@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-08T22:36:41+00:00">2021-03-08T22:36:41+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-08T22:38:06+00:00">2021-03-08T22:38:06+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         12.6
+         17.2
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>51</td>
         <td>47</td>
         <td>4</td>
-        <td>12.6</td>
+        <td>17.2</td>
       </tr>
       
     </tbody>
@@ -306,14 +306,14 @@
           <code class="ruby">def turn(board)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="37">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="10" data-linenumber="37">
+          <span class="hits">10</span>
           
           <code class="ruby">  puts &quot;Please enter 1-9:&quot;</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="38">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="10" data-linenumber="38">
+          <span class="hits">10</span>
           
           <code class="ruby">  input = gets.strip</code>
         </li>
@@ -459,11 +459,11 @@
         <li class="covered" data-hits="12" data-linenumber="62">
           <span class="hits">12</span>
           
-          <code class="ruby">  while turn_count(board) &lt; 10</code>
+          <code class="ruby">  while turn_count(board) &lt; 10 &amp;&amp; !over?(board)</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="63">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="7" data-linenumber="63">
+          <span class="hits">7</span>
           
           <code class="ruby">    turn(board)</code>
         </li>
@@ -498,14 +498,14 @@
           <code class="ruby">def won?(board)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="69">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="13" data-linenumber="69">
+          <span class="hits">13</span>
           
           <code class="ruby">  result = false</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="70">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="13" data-linenumber="70">
+          <span class="hits">13</span>
           
           <code class="ruby">  WIN_COMBINATIONS.each { |win_combination|</code>
         </li>
@@ -522,8 +522,8 @@
           <code class="ruby">    win_indexs = [</code>
         </li>
       
-        <li class="covered" data-hits="64" data-linenumber="73">
-          <span class="hits">64</span>
+        <li class="covered" data-hits="104" data-linenumber="73">
+          <span class="hits">104</span>
           
           <code class="ruby">      win_combination[0],</code>
         </li>
@@ -552,8 +552,8 @@
           <code class="ruby">    board_positions = [</code>
         </li>
       
-        <li class="covered" data-hits="64" data-linenumber="78">
-          <span class="hits">64</span>
+        <li class="covered" data-hits="104" data-linenumber="78">
+          <span class="hits">104</span>
           
           <code class="ruby">      board[win_indexs[0]],</code>
         </li>
@@ -582,14 +582,14 @@
           <code class="ruby">  #use of the full? function takes in a partial board a verifies no spaces are empty</code>
         </li>
       
-        <li class="covered" data-hits="64" data-linenumber="83">
-          <span class="hits">64</span>
+        <li class="covered" data-hits="104" data-linenumber="83">
+          <span class="hits">104</span>
           
           <code class="ruby">    if (board_positions[0] == board_positions[1] &amp;&amp; board_positions[1] == board_positions[2]) &amp;&amp; full?(board_positions)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="84">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="9" data-linenumber="84">
+          <span class="hits">9</span>
           
           <code class="ruby">      result = win_combination</code>
         </li>
@@ -606,8 +606,8 @@
           <code class="ruby">  }</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="87">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="13" data-linenumber="87">
+          <span class="hits">13</span>
           
           <code class="ruby">  return result</code>
         </li>
@@ -630,8 +630,8 @@
           <code class="ruby">def full?(board)</code>
         </li>
       
-        <li class="covered" data-hits="100" data-linenumber="91">
-          <span class="hits">100</span>
+        <li class="covered" data-hits="198" data-linenumber="91">
+          <span class="hits">198</span>
           
           <code class="ruby">  return !board.any? {|position| position == &quot; &quot; || position.nil?}</code>
         </li>
@@ -654,8 +654,8 @@
           <code class="ruby">def draw?(board)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="95">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="95">
+          <span class="hits">8</span>
           
           <code class="ruby">   return full?(board) &amp;&amp; !won?(board)</code>
         </li>
@@ -678,8 +678,8 @@
           <code class="ruby">def over?(board)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="99">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="11" data-linenumber="99">
+          <span class="hits">11</span>
           
           <code class="ruby">  return full?(board) || won?(board) || draw?(board)</code>
         </li>
