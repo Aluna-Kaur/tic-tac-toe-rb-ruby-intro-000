@@ -55,7 +55,7 @@ def current_player(board, turn_count)
 end
 
 def turn_count(board)
-  return board.map{|space| space != " ".count}
+  return board.map{|space| space != " ".count+1}
 end
 
 def play(board)
