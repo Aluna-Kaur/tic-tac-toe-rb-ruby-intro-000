@@ -38,8 +38,14 @@ def turn(board, turn_count)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
+    puts system('clear')
     move(board, index, current_player)
     display_board(board)
+    if over?(board)
+      won? ? puts "Congratulations #{winner(board)}"
+    else
+      turn(board)
+    end
   else
     turn(board)
   end
@@ -55,7 +61,6 @@ end
 def play(board)
   while turn_count(board) < 10
     turn(board)
-    turn_count += 1
   end
 end
 
