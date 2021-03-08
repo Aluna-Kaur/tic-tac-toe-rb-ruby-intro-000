@@ -60,7 +60,6 @@ end
 
 def play(board)
   while turn_count(board) < 10 && !over?(board)
-
     turn(board)
   end
 end
