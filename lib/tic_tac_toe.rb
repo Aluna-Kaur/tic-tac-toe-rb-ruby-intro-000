@@ -42,7 +42,7 @@ def turn(board, turn_count)
     move(board, index, current_player)
     display_board(board)
     if over?(board)
-      won? ? puts "Congratulations #{winner(board)}"
+      won? ? puts "Congratulations #{winner(board)}" : puts "The game is a draw"
     else
       turn(board)
     end
